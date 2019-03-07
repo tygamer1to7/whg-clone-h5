@@ -1,7 +1,57 @@
 <head>
-  <script src="https://tygamer1to7.github.io/whg-clone-h5/js/game.js"></script>
-  <link rel="sylesheet" href="https://tygamer1to7.github.io/whg-clone-h5/css/game.css">
+  <script>function setVars(){
+x = 0;
+y = 0;
+}
+function mainGame(){
+document.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "ArrowLeft") {
+        gameMoveEntity(x-1,y);
+    }
+    if (event.key === "ArrowRight") {
+        gameMoveEntity(x+1,y)
+    }
+});
 
+
+
+
+
+
+
+
+
+
+
+
+
+}
+function gameMoveEntity(a,b){
+   x = x + a;
+   y = y + b;
+   document.getElementByClass("player").top = y + "px";
+   document.getElementByClass("player").left = x + "px";
+}</script>
+  <style>
+  :root {
+    --player: #ff0000;
+    --orb: #0011ff;
+    --coin: #ffee00;
+    --bg: #fefefe;
+    --key: #ccc;
+    --endzone: #99ff00;
+}
+.player {
+    background-color: #ff0000;
+    padding: 10px 10px;
+    top: 0;
+    left: 0;
+
+
+
+}
+  </style>
+ 
 </head>
 <body>
   <div class="player">.</div>
