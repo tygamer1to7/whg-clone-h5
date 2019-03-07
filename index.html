@@ -4,7 +4,7 @@ x = 0;
 y = 0;
 }
 function mainGame(){
-document.addEventListener("keypress", function onEvent(event) {
+document.addEventListener("keydown", function onEvent(event) {
     if (event.key === "ArrowLeft") {
         gameMoveEntity(-1,y);
     }
