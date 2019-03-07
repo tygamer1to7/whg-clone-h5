@@ -6,3 +6,12 @@
     --key: #ccc;
     --endzone: #99ff00;
 }
+.player {
+    color: var(--player);
+    padding: 10px 10px;
+    top: 0;
+    left: 0;
+
+
+
+}
