@@ -3,18 +3,37 @@ x = 0;
 y = 0;
 }
 function mainGame(){
-document.addEventListener("keypress", function onEvent(event) {
-    if (event.key === "ArrowLeft") {
-        gameMoveEntity(x-1,y);
+window.addEventListener('keydown', handleKeyDown, true)
+window.addEventListener('keyup', handleKeyUp, true)
+
+
+var direction = 0;
+var key_left = false;
+var key_right = false;
+
+function handleKeyDown(event)
+    {
+        if (event.key === "ArrowLeft") 
+                key_left = true;
+        else if (event.key === "ArrowRight")
+                key_right = true;
     }
-    if (event.key === "ArrowRight") {
-        gameMoveEntity(x+1,y)
+
+function handleKeyUp(event)
+    {
+           if (event.key === "ArrowLeft") 
+                key_left = false;
+           else if (event.key === "ArrowRight")
+                key_right = false;
     }
-});
-
-
-
-
+    do {
+     x++   
+    }
+    while (key_right = true);
+    do {
+     x--   
+    }
+    while (key_left = true);
 
 
 
