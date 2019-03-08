@@ -1,37 +1,5 @@
 <head>
-  <script>function setVars(){
-x = 0;
-y = 0;
-}
-function mainGame(){
-document.addEventListener("keydown", function onEvent(event) {
-    if (event.key === "ArrowLeft") {
-        gameMoveEntity(-1,y);
-    }
-    if (event.key === "ArrowRight") {
-        gameMoveEntity(1,y)
-    }
-});
-setVars();
-mainGame();
-
-
-
-
-
-
-
-
-
-
-
-}
-function gameMoveEntity(a,b){
-   x = x + a;
-   y = y + b;
-   document.getElementByClass("player").top = y + "px";
-   document.getElementByClass("player").left = x + "px";
-}</script>
+  <script src="https://tygamer1to7.github.io/"></script>
   <style>
   :root {
     --player: #ff0000;
