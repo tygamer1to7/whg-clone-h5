@@ -51,8 +51,9 @@ function handleKeyUp(event)
 function gameMoveEntity(a,b){
    x = x + a;
    y = y + b;
-   var document.getElementByClassName("player").top = y + "px"
-   var document.getElementByClassName("player").left = x + "px"
+   var w = document.getElementByClassName("player")
+   w.top = y + "px"
+   w.left = x + "px"
 }
 </script>
   <style>:root {
