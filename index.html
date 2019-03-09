@@ -1,4 +1,25 @@
 <head>
+
+  <style>:root {
+    --player: #ff0000;
+    --orb: #0011ff;
+    --coin: #ffee00;
+    --bg: #fefefe;
+    --key: #ccc;
+    --endzone: #99ff00;
+}
+#player {
+    background-color: #ff0000;
+    padding: 10px 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+</style>
+ 
+</head>
+<body>
   <script>
     var w = document.getElementById("player");
 setVars();
@@ -54,26 +75,6 @@ function gameMoveEntity(a,b){
       document.getElementById("player").left = x + "px";
 }
 </script>
-  <style>:root {
-    --player: #ff0000;
-    --orb: #0011ff;
-    --coin: #ffee00;
-    --bg: #fefefe;
-    --key: #ccc;
-    --endzone: #99ff00;
-}
-#player {
-    background-color: #ff0000;
-    padding: 10px 10px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-}
-</style>
- 
-</head>
-<body>
   <div id="player"></div>
 </body>
 
