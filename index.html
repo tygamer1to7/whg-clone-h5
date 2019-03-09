@@ -1,5 +1,6 @@
 <head>
   <script>
+    var w = document.getElementById("player");
 setVars();
 mainGame();
 function setVars(){
@@ -14,7 +15,7 @@ window.addEventListener('keyup', handleKeyUp, true)
 var direction = 0;
 var key_left = false;
 var key_right = false;
-var w = document.getElementById("player");
+
 function handleKeyDown(event)
     {
         if (event.key === "ArrowLeft") 
