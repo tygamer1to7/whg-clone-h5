@@ -51,7 +51,7 @@ function handleKeyUp(event)
 function gameMoveEntity(a,b){
    x = x + a;
    y = y + b;
-   var w = document.getElementsByClassName("player");
+   var w = document.getElementById("player");
    w.top = y + "px";
    w.left = x + "px";
 }
@@ -64,7 +64,7 @@ function gameMoveEntity(a,b){
     --key: #ccc;
     --endzone: #99ff00;
 }
-.player {
+#player {
     background-color: #ff0000;
     padding: 10px 10px;
     position: absolute;
@@ -75,7 +75,7 @@ function gameMoveEntity(a,b){
  
 </head>
 <body>
-  <div class="player"></div>
+  <div id="player"></div>
 </body>
 
 
