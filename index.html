@@ -21,43 +21,42 @@ var y = 0;
     var direction = 0;
 var key_left = false;
 var key_right = false;
-window.addEventListener('keydown', handleKeyDown, true)
-window.addEventListener('keyup', handleKeyUp, true)
+window.addEventListener('keydown', onKeypress);
+window.addEventListener('keyup', onKeyUp);
+
    $("#player").top = '0px';
    $("#player").left = '0px';
 
 
-function handleKeyDown(event)
-    {
-        if (event.key === "ArrowLeft") 
-                key_left = true;
-        else if (event.key === "ArrowRight")
-                key_right = true;
-    }
+const currentKeysPressed = {};
 
-function handleKeyUp(event)
-    {
-           if (event.key === "ArrowLeft") 
-                key_left = false;
-           else if (event.key === "ArrowRight")
-                key_right = false;
-    }
-    do {
-     gameMoveEntity(1,0);  
-    }
-    while (key_right = true);
-    do {
-     gameMoveEntity(-1,0);
-    }
-    while (key_left = true);
+function onKeypress(event) {
 
-   
+  /* Update keys pressed state for event.key to true
+  signifiying the key that caused the event is now pressed */
+  currentKeysPressed[event.key] = true;
 
+  /*
+  Current code unlikely to be needed:
 
+  switch (event.key) {
+    case "ArrowUp":
+      //Code to execute
+      break;
+    case "ArrowDown":
+      //Code to execute
+      ...
+      ...
+  }
+  */
+}
 
+/* Defined new event listener to reset key state
+on key release */
+function onKeyUp(event) {
 
-
-
+  currentKeysPressed[event.key] = false;
+}
 
 
 function gameMoveEntity(a,b){
@@ -66,7 +65,12 @@ function gameMoveEntity(a,b){
    $("#player").top = '"' + y + "px" + '"';
    $("#player").left = '"' + x + "px" + '"';
 }
-
+while 1 {
+  if(currentKeysPressed["ArrowLeft"] == true) {
+    
+  }
+  
+}
   </script>
 </head>
 <body>
