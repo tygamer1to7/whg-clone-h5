@@ -29,11 +29,10 @@ var y = 0;
     var direction = 0;
 var key_left = false;
 var key_right = false;
-
-mainGame();
-function mainGame(){
 window.addEventListener('keydown', handleKeyDown, true)
 window.addEventListener('keyup', handleKeyUp, true)
+
+
 
 function handleKeyDown(event)
     {
@@ -59,6 +58,7 @@ function handleKeyUp(event)
     }
     while (key_left = true);
 
+   
 
 
 
@@ -67,7 +67,6 @@ function handleKeyUp(event)
 
 
 
-}
 function gameMoveEntity(a,b){
    x = x + a;
    y = y + b;
