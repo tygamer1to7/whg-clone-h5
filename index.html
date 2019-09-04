@@ -1,5 +1,5 @@
 <head>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>:root {
     --player: #ff0000;
     --orb: #0011ff;
@@ -63,8 +63,8 @@ function handleKeyUp(event)
 function gameMoveEntity(a,b){
    x = x + a;
    y = y + b;
-   document.getElementById("player").top = '"' + y + "px" + '"';
-   document.getElementById("player").left = '"' + x + "px" + '"';
+   $("#player").top = '"' + y + "px" + '"';
+   $("#player").left = '"' + x + "px" + '"';
 }
 
   </script>
