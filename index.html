@@ -26,15 +26,14 @@
   <script>
 var x = 0;
 var y = 0;
+    var direction = 0;
+var key_left = false;
+var key_right = false;
+
 mainGame();
 function mainGame(){
 window.addEventListener('keydown', handleKeyDown, true)
 window.addEventListener('keyup', handleKeyUp, true)
-
-
-var direction = 0;
-var key_left = false;
-var key_right = false;
 
 function handleKeyDown(event)
     {
