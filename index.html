@@ -23,60 +23,7 @@
 
 
   <div id="player"></div>
-  <script>
-    var w = document.getElementById("player");
-setVars();
-mainGame();
-function setVars(){
-x = 0;
-y = 0;
-  var key_left = false;
-var key_right = false;
-}
-function mainGame(){
-window.addEventListener('keydown', handleKeyDown, true);
-window.addEventListener('keyup', handleKeyUp, true);
-
-
-function handleKeyDown(event)
-    {
-        if (event.key === "ArrowLeft") 
-                key_left = true;
-        else if (event.key === "ArrowRight")
-                key_right = true;
-    }
-
-function handleKeyUp(event)
-    {
-           if (event.key === "ArrowLeft") 
-                key_left = false;
-           else if (event.key === "ArrowRight")
-                key_right = false;
-    }
-    do {
-     gameMoveEntity(1,0);
-    }
-    while (key_right == true);
-    do {
-     gameMoveEntity(-1,0);  
-    }
-    while (key_left == true);
-
-
-
-
-
-
-
-
-
-}
-function gameMoveEntity(a,b){
-   x = x + a;
-   y = y + b;
-      document.getElementById("player").style.top = y + "px";
-      document.getElementById("player").style.left = x + "px";
-}</script>
+  <script src="js/game.js"></script>
 </body>
 
 
