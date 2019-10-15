@@ -65,7 +65,7 @@ function gameMoveEntity(a,b){
    $("#player").top = '"' + y + "px" + '"';
    $("#player").left = '"' + x + "px" + '"';
 }
-while ( true ) {
+while ( currentKeysPressed != {} ) {
   if(currentKeysPressed["ArrowLeft"] == true) {
     gameMoveEntity(-1,0)
   }
