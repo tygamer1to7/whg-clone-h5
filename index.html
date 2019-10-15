@@ -30,25 +30,26 @@ window.addEventListener('keyup', onKeyUp);
 
 const currentKeysPressed = {};
 
-function onKeypress(event) {
+function onKeydown(event) {
 
   /* Update keys pressed state for event.key to true
   signifiying the key that caused the event is now pressed */
   currentKeysPressed[event.key] = true;
 
-  /*
-  Current code unlikely to be needed:
 
   switch (event.key) {
     case "ArrowUp":
-      //Code to execute
+      gameMoveEntity(0,1);
       break;
     case "ArrowDown":
-      //Code to execute
-      ...
-      ...
+  gameMoveEntity(0,-1);
+      break;
+    case "ArrowLeft":
+      gameMoveEntity(-1,0);
+    case "ArrowRight":
+      gameMoveEntity(1,0);
   }
-  */
+
 }
 
 /* Defined new event listener to reset key state
@@ -65,20 +66,7 @@ function gameMoveEntity(a,b){
    $("#player").top = '"' + y + "px" + '"';
    $("#player").left = '"' + x + "px" + '"';
 }
-while ( currentKeysPressed != {} ) {
-  if(currentKeysPressed["ArrowLeft"] == true) {
-    gameMoveEntity(-1,0)
-  }
-    if(currentKeysPressed["ArrowRight"] == true) {
-    gameMoveEntity(1,0)
-  }
-    if(currentKeysPressed["ArrowUp"] == true) {
-    gameMoveEntity(0,1)
-  }
-    if(currentKeysPressed["ArrowDown"] == true) {
-    gameMoveEntity(0,-1)
-  }
-}
+
   </script>
 </head>
 <body>
