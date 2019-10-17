@@ -42,19 +42,6 @@ function onKeypress(event) {
   currentKeysPressed[event.key] = true;
 
 
-  switch (event.key) {
-    case "ArrowUp":
-      gameMoveEntity(0,1);
-      break;
-    case "ArrowDown":
-  gameMoveEntity(0,-1);
-      break;
-    case "ArrowLeft":
-      gameMoveEntity(-1,0);
-    case "ArrowRight":
-      gameMoveEntity(1,0);
-  }
-
 }
 
 /* Defined new event listener to reset key state
@@ -63,15 +50,35 @@ function onKeyUp(event) {
 
   currentKeysPressed[event.key] = false;
 }
-
+function gameCheckKeys()
+     {
+      if ( currentKeysPressed["ArrowUp"] == true)
+      {
+        gameMoveEntity(0,1);
+      }
+       if ( currentKeysPressed["ArrowDown"] == true)
+      {
+        gameMoveEntity(0,-1);
+      }
+             if ( currentKeysPressed["ArrowLeft"] == true)
+      {
+        gameMoveEntity(-1,0);
+      }
+             if ( currentKeysPressed["ArrowRight"] == true)
+      {
+        gameMoveEntity(1,0);
+      }
+       
+     }
 
 function gameMoveEntity(a,b){
    x = x + a;
    y = y + b;
    $("#player").top = '' + y + "px";
    $("#player").left = '' + x + "px";
-}
 
+}
+  setInterval(gameCheckKeys(), 10);
   </script>
 </head>
 <body>
